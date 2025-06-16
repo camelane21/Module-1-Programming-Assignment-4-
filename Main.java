@@ -39,4 +39,25 @@ class RegularPolygon {
         this.x    = x;
         this.y    = y;
     }
+     // Accessors and mutators
+    public int    getN()    { return n; }
+    public void   setN(int n)    { this.n = n; }
+    public double getSide() { return side; }
+    public void   setSide(double side) { this.side = side; }
+    public double getX()    { return x; }
+    public void   setX(double x)    { this.x = x; }
+    public double getY()    { return y; }
+    public void   setY(double y)    { this.y = y; }
+
+    /** Perimeter = n × side */
+    public double getPerimeter() {
+        return n * side;
+    }
+
+    /**
+     * Area = (n × s²) / (4 × tan(π / n))
+     */
+    public double getArea() {
+        return (n * side * side) / (4 * Math.tan(Math.PI / n));
+    }
 }
