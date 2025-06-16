@@ -15,3 +15,28 @@ public class Main {
                           p3.getPerimeter(), p3.getArea());
     }
 }
+
+class RegularPolygon {
+    private int    n;
+    private double side;
+    private double x;
+    private double y;
+
+    /** No-arg: 3 sides, side length 1, center at (0,0) */
+    public RegularPolygon() {
+        this(3, 1.0, 0.0, 0.0);
+    }
+
+    /** n-sided, given side length, center at origin */
+    public RegularPolygon(int n, double side) {
+        this(n, side, 0.0, 0.0);
+    }
+
+    /** n-sided, given side length and center (x, y) */
+    public RegularPolygon(int n, double side, double x, double y) {
+        this.n    = n;
+        this.side = side;
+        this.x    = x;
+        this.y    = y;
+    }
+}
